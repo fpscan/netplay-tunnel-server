@@ -1,11 +1,10 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.9-slim
+# Dockerfile
+FROM python:3.7-slim
 
-# Set the working directory
 WORKDIR /app
 
-# Copy the rest of the application
-COPY . .
+COPY . /app
 
-# Command to run your application
+EXPOSE 55435
+
 CMD ["python3", "-OO", "retroarch_tunnel_server.py"]
